@@ -1,0 +1,353 @@
+#page-contact {}
+
+#page-contact .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    padding: 1.5rem 0;
+    overflow-y: clip;
+}
+
+#page-contact h1 {
+    font-size: 2.5rem;
+    margin: 0.75rem 0;
+    text-align: center;
+}
+
+#page-contact h2 {
+    font-size: 2rem;
+    font-weight: normal;
+    text-align: center;
+    font-style: italic;
+    margin: 0.75rem 2rem;
+}
+
+#page-contact .options {
+    width: 100%;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+#page-contact .options :is(.mail, .linkedin) {
+    flex: 1;
+    text-align: center;
+    font-size: 1.5rem;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.66);
+    border-radius: 1rem;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.125);
+    transition: all 0.33s ease-in-out;
+}
+
+#page-contact .options :is(.mail, .linkedin):hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    scale: 1.02;
+    box-shadow: 0 0 0.75rem rgba(0, 0, 0, 0.33);
+}
+
+#page-contact .options :is(.mail, .linkedin) svg {
+    width: 10rem;
+    height: 10rem;
+}
+
+#page-contact .options :is(.mail, .linkedin) .title {
+    font-weight: bold;
+    margin-bottom: 0.75rem;
+
+}
+
+#page-contact .options :is(.mail, .linkedin) :is(.linkedin-link, .mail-address) {
+    font-weight: normal;
+    color: black;
+    text-decoration: none;
+    display: inline-flex;
+    flex-direction: row;
+    gap: 0.25rem;
+}
+
+#page-contact .options :is(.mail, .linkedin) :is(.linkedin-link, .mail-address) svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+#page-contact .options .mail .mail-address button {
+    position: relative;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#page-contact .options .mail .mail-address button::before {
+    position: absolute;
+    z-index: 1;
+    bottom: 140%;
+    left: 0;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-align: center;
+    text-wrap: wrap;
+    background-color: #bde2ff;
+    border-radius: 2px;
+    padding: 0.3em 0.5em;
+    visibility: hidden;
+    opacity: 0;
+    content: "Copy to Clipboard";
+    transition: all 0.2s ease-in;
+}
+
+#page-contact .options .mail .mail-address button.success-opacity::before {
+    visibility: visible;
+    opacity: 1;
+}
+
+#page-contact .options .mail .mail-address button.success-text::before {
+    content: "Copied!";
+}
+
+#page-contact .options .mail .mail-address button::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: -40%;
+    left: 0.75rem;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #bde2ff transparent transparent transparent;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.2s ease-in;
+}
+
+#page-contact .options .mail .mail-address button.success-opacity::after,
+#page-contact .options .mail .mail-address button:hover::before,
+#page-contact .options .mail .mail-address button:hover::after {
+    visibility: visible;
+    opacity: 1;
+}
+
+#page-contact .options .mail .mail-address button path {
+    transition: fill 0.2s ease-in;
+}
+
+#page-contact .options .mail .mail-address button:hover path {
+    fill: #03487c;
+    stroke-width: 10px;
+}
+
+#page-contact .options .linkedin .linkedin-link {
+    transition: fill 0.2s ease-in;
+}
+
+#page-contact .options .linkedin .linkedin-link:hover {
+    color: #03487c;
+}
+
+#page-contact .options .linkedin .linkedin-link path {
+    transition: fill 0.2s ease-in;
+}
+
+#page-contact .options .linkedin .linkedin-link:hover path {
+    fill: #03487c;
+}
+
+#page-contact .options .mail :is(.plane1, .plane2, .plane3) {
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+    left: -8rem;
+    opacity: 0;
+}
+
+#page-contact .options .mail:hover .plane1 {
+    animation: fly1 4s linear infinite, fadeInOut 4s ease-in-out infinite;
+}
+
+#page-contact .options .mail:hover .plane2 {
+    animation: fly2 4s linear infinite, fadeInOut 4s ease-in-out infinite;
+    animation-delay: 1s;
+}
+
+#page-contact .options .mail:hover .plane3 {
+    animation: fly3 4s linear infinite, fadeInOut 4s ease-in-out infinite;
+    animation-delay: 2.5s;
+}
+
+#page-contact .options .linkedin :is(.chat1, .chat2) {
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+}
+
+#page-contact .options .linkedin .chat1 {
+    top: 2rem;
+    left: 2rem;
+}
+
+#page-contact .options .linkedin .chat2 {
+    top: 3rem;
+    right: 4rem;
+    animation-delay: 1s;
+}
+
+#page-contact .options .linkedin:hover :is(.chat1, .chat2) {
+    animation: scale 4s linear infinite, fadeInOut 4s ease-in-out infinite;
+}
+
+#page-contact .options .linkedin:hover .chat2 {
+    animation-delay: 1s;
+}
+
+@keyframes fly1 {
+    0% {
+        transform: translate(0vw, -2rem) rotate(-10deg);
+    }
+
+    20% {
+        transform: translate(22vw, -5rem) rotate(30deg);
+    }
+
+    40% {
+        transform: translate(44vw, -1rem) rotate(20deg);
+    }
+
+    60% {
+        transform: translate(66vw, -2rem) rotate(-10deg);
+    }
+
+    80% {
+        transform: translate(88vw, 0rem) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(110vw, 3rem) rotate(20deg);
+    }
+}
+
+@keyframes fly2 {
+    0% {
+        transform: translate(0vw, 6rem) rotate(-10deg);
+    }
+
+    20% {
+        transform: translate(22vw, -2rem) rotate(30deg);
+    }
+
+    40% {
+        transform: translate(44vw, 4rem) rotate(20deg);
+    }
+
+    60% {
+        transform: translate(66vw, -2rem) rotate(-10deg);
+    }
+
+    80% {
+        transform: translate(88vw, 0rem) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(110vw, 3rem) rotate(20deg);
+    }
+}
+
+@keyframes fly3 {
+    0% {
+        transform: translate(0vw, -10rem) rotate(80deg);
+    }
+
+    20% {
+        transform: translate(22vw, -3rem) rotate(30deg);
+    }
+
+    40% {
+        transform: translate(44vw, -7rem) rotate(0deg);
+    }
+
+    60% {
+        transform: translate(66vw, -2rem) rotate(-10deg);
+    }
+
+    80% {
+        transform: translate(88vw, 0rem) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(110vw, 3rem) rotate(20deg);
+    }
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(0.7);
+    }
+
+    33% {
+        transform: scale(1.2);
+    }
+
+    66% {
+        transform: scale(0.9);
+    }
+
+    100% {
+        transform: scale(1.4);
+    }
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Background Blobs */
+
+#page-contact .container .decorative:nth-child(1) {
+    top: -4rem;
+    left: -6rem;
+    width: 36rem;
+    height: 36rem;
+}
+
+#page-contact .container .decorative:nth-child(2) {
+    bottom: -4rem;
+    right: -6rem;
+    width: 36rem;
+    height: 36rem;
+    animation-delay: 2s;
+}
+
+@media screen and (max-width: 1300px) {
+    #page-contact .options {
+        flex-direction: column;
+        width: fit-content;
+    }
+
+    #page-contact .options :is(.mail, .linkedin) {
+        padding: 1rem 3rem;
+    }
+}

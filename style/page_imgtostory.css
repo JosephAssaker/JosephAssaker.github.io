@@ -1,0 +1,19 @@
+#page-imgtostory {}
+
+#page-imgtostory .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+#page-imgtostory img {
+    max-width: 25%;
+    height: auto;
+}
+
+@media screen and (max-width: 1000px) {
+    #page-imgtostory img {
+        max-width: 35%;
+    }
+}

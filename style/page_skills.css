@@ -1,0 +1,105 @@
+#page-skills {}
+
+#page-skills .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 90%;
+    margin: 0 auto;
+    padding: 1.5rem 0;
+    overflow-y: clip;
+}
+
+#page-skills .header {
+    align-self: center;
+    font-size: 3.25rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+#page-skills :is(.python-programming, .programming, .programming-adjacent) {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+#page-skills .programming-adjacent {
+    margin-bottom: 2rem;
+}
+
+#page-skills :is(.python-programming, .programming-adjacent) {
+    position: relative;
+}
+
+#page-skills :is(.python-programming, .programming, .programming-adjacent) .title {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+#page-skills :is(.python-programming, .programming, .programming-adjacent) .title svg {
+    height: 1.75rem;
+    width: 1.75rem;
+}
+
+#page-skills .skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
+    grid-gap: 1rem;
+}
+
+#page-skills .skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#page-skills .skill svg {
+    height: 6rem;
+    width: 100%;
+    transition: all 0.2s ease-in-out;
+}
+
+#page-skills .skill:hover svg {
+    scale: 1.1;
+}
+
+#page-skills .skill span {
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+/* Background Blobs */
+
+#page-skills .python-programming .decorative:nth-child(1) {
+    top: -8rem;
+    left: -8rem;
+    width: 36rem;
+    height: 36rem;
+}
+
+#page-skills .python-programming .decorative:nth-child(2) {
+    top: 4rem;
+    right: -6rem;
+    width: 36rem;
+    height: 36rem;
+    animation-delay: 4s;
+}
+
+#page-skills .programming-adjacent .decorative:nth-child(1) {
+    top: -4rem;
+    left: 16rem;
+    width: 28rem;
+    height: 28rem;
+    animation-delay: 2s;
+}
+
+@media screen and (max-width: 1000px) {
+    #page-skills .python-programming .decorative:nth-child(2) {
+        top: 16rem;
+    }
+
+    #page-skills .programming-adjacent .decorative:nth-child(1) {
+        left: -4rem;
+    }
+}

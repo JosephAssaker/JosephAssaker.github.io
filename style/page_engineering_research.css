@@ -1,0 +1,425 @@
+:is(#page-engineering, #page-research) .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    padding: 1.5rem 0;
+}
+
+:is(#page-engineering, #page-research) .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+:is(#page-engineering, #page-research) .header .years {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 1.5rem;
+}
+
+:is(#page-engineering, #page-research) .header .years .visual-years {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.25rem;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s ease-in-out;
+}
+
+:is(#page-engineering, #page-research) .header .years:hover .visual-years {
+    max-height: 3rem;
+}
+
+:is(#page-engineering, #page-research) .header .years .visual-years svg {
+    width: 6rem;
+}
+
+:is(#page-engineering, #page-research) .header .title {
+    font-size: 2.25rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+:is(#page-engineering, #page-research) .header .company {
+    font-weight: normal;
+    color: black;
+    text-decoration: none;
+    display: inline-flex;
+    flex-direction: row;
+    gap: 0.25rem;
+
+}
+
+:is(#page-engineering, #page-research) .header .company svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+:is(#page-engineering, #page-research) .header .tags {
+    margin-top: -0.5rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+:is(#page-engineering, #page-research) .header .tags .tag {
+    font-size: 1rem;
+    padding: 0.25rem 0.75rem 0.375rem 0.75rem;
+    border-radius: 0.5rem;
+    background-color: rgba(24, 88, 131, 0.603);
+    color: white;
+}
+
+:is(#page-engineering, #page-research) .content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+:is(#page-engineering, #page-research) .content .content-title {
+    position: relative;
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+:is(#page-engineering, #page-research) .content .content-title svg {
+    width: 2.1rem;
+    height: 2.1rem;
+    margin-right: -0.5rem
+}
+
+:is(#page-engineering, #page-research) .content .content-title u {
+    text-wrap: nowrap;
+}
+
+:is(#page-engineering, #page-research) .content .content-title p {
+    margin: 0;
+    padding: 0;
+}
+
+:is(#page-engineering, #page-research) .content .point {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+:is(#page-engineering, #page-research) .content .point .description {
+    font-size: 1.25rem;
+    width: 90%;
+    margin-bottom: 0.75rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+:is(#page-engineering, #page-research) .content .point .description .idx {
+    font-size: 2rem;
+    padding-left: 0.75rem;
+    font-weight: bold;
+    font-family: "Press Start 2P", serif;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    box-sizing: border-box;
+    background-color: rgba(75, 151, 200, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+:is(#page-engineering, #page-research) .content .point .description .text {
+    flex: 1;
+    margin-right: 2rem;
+}
+
+:is(#page-engineering, #page-research) .content .point .description .text p {
+    margin: 0 0 0.5rem 0;
+}
+
+:is(#page-engineering, #page-research) .content .point .description .text p a {
+    font-weight: normal;
+    color: black;
+    display: inline-flex;
+    flex-direction: row;
+    gap: 0.25rem;
+
+}
+
+:is(#page-engineering, #page-research) .content .point .description .text p a svg {
+    width: 1rem;
+    height: 1rem;
+}
+
+:is(#page-engineering, #page-research) .content .point .examples {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+:is(#page-engineering, #page-research) .content .point .examples .example {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+}
+
+:is(#page-engineering, #page-research) .content .point .examples .example .example-description {
+    flex: 1;
+    font-size: 1.25rem;
+}
+
+:is(#page-engineering, #page-research) .content .point .examples .example .example-description ul {
+    margin: 1rem 0 0 2rem;
+    padding: 0;
+    list-style-type: circle;
+    font-weight: bold;
+}
+
+:is(#page-engineering, #page-research) .content .point .examples .example .example-description ul li {
+    margin: 0.5rem 0;
+}
+
+:is(#page-engineering, #page-research) .content .point .examples .example .example-image {
+    flex: 1;
+    background-color: white;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.125);
+}
+
+:is(#page-engineering, #page-research) .content .point .examples .example .example-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+:is(#page-engineering, #page-research) .tech-stack {
+    width: 100%;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+    padding: 0 1.5rem;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+:is(#page-engineering, #page-research) .tech-stack .tech-stack-title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+:is(#page-engineering, #page-research) .tech-stack .tech-stack-items {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+:is(#page-engineering, #page-research) .tech-stack .tech-stack-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+:is(#page-engineering, #page-research) .tech-stack .tech-stack-item svg {
+    width: 5rem;
+    height: 5rem;
+}
+
+#page-research .divider {
+    width: 85%;
+    height: 0.15rem;
+    background-color: rgb(180, 180, 180);
+    border-radius: 0.5rem;
+    margin: 1rem 0;
+}
+
+#page-research .other-research {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+#page-research .other-research .title {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#page-research .other-research .papers {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+#page-research .other-research .paper {
+    flex: 1;
+    position: relative;
+    border-radius: 1rem;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.125);
+    transition: all 0.25s ease-in-out;
+    background-color: white;
+}
+
+#page-research .other-research .paper:hover {
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.625);
+    scale: 1.02;
+}
+
+#page-research .other-research .paper svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    transition: all 0.25s ease-in-out;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+}
+
+#page-research .other-research .paper:hover svg {
+    width: 2rem;
+    height: 2rem;
+}
+
+#page-research .other-research .paper img {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    display: block;
+}
+
+/* Background Blobs */
+
+#page-research .content .content-title .decorative:nth-child(1) {
+    top: -11rem;
+    left: -6rem;
+    width: 36rem;
+    height: 36rem;
+}
+
+#page-research .content .point:nth-child(3) .decorative:nth-child(1) {
+    top: -8rem;
+    right: -2rem;
+    width: 22rem;
+    height: 22rem;
+}
+
+#page-research .content .point:nth-child(3) .decorative:nth-child(2) {
+    top: 8rem;
+    left: -14rem;
+    width: 18rem;
+    height: 18rem;
+    animation-delay: 2s;
+}
+
+#page-research .content .point:nth-child(4) .decorative:nth-child(1) {
+    top: -2rem;
+    right: 0;
+    width: 32rem;
+    height: 32rem;
+    animation-delay: 1s;
+}
+
+#page-research .other-research .papers .decorative:nth-child(1) {
+    top: -12rem;
+    left: -12rem;
+    width: 36rem;
+    height: 36rem;
+    animation-delay: 3s;
+}
+
+#page-research .other-research .papers .decorative:nth-child(2) {
+    top: 25%;
+    left: 25%;
+    width: 32rem;
+    height: 32rem;
+}
+
+#page-engineering .content .point:nth-child(1) .decorative:nth-child(1) {
+    top: -8rem;
+    right: 0;
+    width: 34rem;
+    height: 34rem;
+}
+
+#page-engineering .content .point:nth-child(1) .decorative:nth-child(2) {
+    top: 4rem;
+    left: -28rem;
+    width: 34rem;
+    height: 34rem;
+    animation-delay: 2s;
+}
+
+#page-engineering .content .point:nth-child(1) .decorative:nth-child(3) {
+    top: 40%;
+    left: 40%;
+    width: 22rem;
+    height: 22rem;
+    animation-delay: 1s;
+}
+
+#page-engineering .content .point:nth-child(1) .decorative:nth-child(4) {
+    bottom: -14rem;
+    left: 0;
+    width: 34rem;
+    height: 34rem;
+}
+
+#page-engineering .tech-stack .decorative:nth-child(1) {
+    bottom: -2rem;
+    right: 12rem;
+    width: 16rem;
+    height: 16rem;
+    animation-delay: 3s;
+}
+
+@media screen and (max-width: 1100px) {
+    :is(#page-engineering, #page-research) .content .point .description .text {
+        margin-right: 0;
+    }
+
+    :is(#page-engineering, #page-research) .content .point .examples .example {
+        width: 90%;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    :is(#page-engineering, #page-research) .content .point .examples .example:nth-child(2) {
+        flex-direction: column-reverse;
+        margin-top: 1rem;
+    }
+
+    :is(#page-engineering, #page-research) .content .point .examples .example .example-description {
+        text-align: center;
+    }
+
+    :is(#page-engineering, #page-research) .content .point .examples .example .example-description ul {
+        text-align: center;
+        list-style-position: inside;
+        width: fit-content;
+        margin: auto;
+        margin-top: 1rem;
+    }
+}

@@ -1,0 +1,314 @@
+#page-more {}
+
+#page-more .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    padding: 1.5rem 0;
+    overflow-y: clip;
+}
+
+#page-more h1 {
+    font-size: 2.5rem;
+    margin: 0.5rem 0;
+}
+
+#page-more :is(.other-projects, .awards) {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+#page-more :is(.projects, .awards-list) {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+#page-more :is(.project, .award) {
+    flex: 1;
+    padding-bottom: 0.5rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.125);
+    transition: all 0.33s ease-in-out;
+}
+
+#page-more :is(.project, .award):hover {
+    box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.5);
+}
+
+#page-more :is(.project, .award) .img-container {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+#page-more .award .img-container svg {
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    color: black;
+    fill: rgba(255, 255, 255, 0.85);
+}
+
+#page-more .award:hover .img-container svg {
+    animation: wiggle 0.5s ease-in-out;
+}
+
+@keyframes wiggle {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(-5deg);
+    }
+
+    50% {
+        transform: rotate(5deg);
+    }
+
+    75% {
+        transform: rotate(-3deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+
+    /* Returns to original position */
+}
+
+#page-more :is(.project, .award) img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 2/1;
+    object-fit: cover;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    padding: 0;
+    margin: 0;
+    transition: all 0.33s ease-in-out;
+}
+
+#page-more :is(.project, .award):hover img {
+    scale: 1.1;
+}
+
+#page-more :is(.project, .award) .title {
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 0.5rem 0.5rem;
+    padding-top: 20%;
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(to top, white, transparent);
+}
+
+#page-more :is(.project, .award) .description {
+    font-size: 1.25rem;
+    text-align: justify;
+    padding: 0 0.75rem;
+}
+
+#page-more :is(.project, .award) .description a {
+    color: black;
+}
+
+#page-more .project .link {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    font-weight: normal;
+    color: black;
+    text-decoration: none;
+    font-size: 1.25rem;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 0.25rem;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 0.5rem;
+    transition: all 0.2s ease-in-out;
+}
+
+#page-more .project .link:hover {
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+    background-color: rgba(255, 255, 255, 0.9);
+    scale: 1.05;
+    top: 0.66rem;
+    right: 0.66rem;
+}
+
+#page-more .project .link svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+#page-more :is(.other-teachings, .volunteering) {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin: 1rem 0;
+}
+
+#page-more .point {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+}
+
+#page-more .point * {
+    flex: 1;
+}
+
+#page-more .point .point-description {
+    font-size: 1.25rem;
+    text-align: justify;
+    padding: 0 0.75rem;
+}
+
+#page-more .point .point-description .title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+#page-more .point .point-description .title .company {
+    font-weight: normal;
+    color: black;
+    text-decoration: none;
+    display: inline-flex;
+    flex-direction: row;
+    gap: 0.25rem;
+
+}
+
+#page-more .point .point-description .title .company svg {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+#page-more .point .point-description ul li:last-child {
+    margin-top: 0.5rem;
+}
+
+#page-more .point .point-img {
+    border-radius: 1rem;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+    height: fit-content;
+    padding: 0;
+}
+
+#page-more .point .point-img img {
+    width: 100%;
+    border-radius: 1rem;
+    display: block;
+}
+
+#page-more .awards {
+    margin-bottom: 2rem;
+}
+
+/* Background Blobs */
+
+#page-more .other-projects .decorative:nth-child(1) {
+    top: -4rem;
+    left: -8rem;
+    width: 36rem;
+    height: 36rem;
+}
+
+#page-more .other-projects .decorative:nth-child(2) {
+    bottom: -18rem;
+    right: -14rem;
+    width: 42rem;
+    height: 42rem;
+    animation-delay: 2s;
+}
+
+#page-more .other-teachings .decorative:nth-child(1) {
+    top: -2rem;
+    left: -4rem;
+    width: 32rem;
+    height: 32rem;
+}
+
+#page-more .volunteering .decorative:nth-child(1) {
+    top: -2rem;
+    left: clac((100% - 36rem) / 2);
+    width: 36rem;
+    height: 36rem;
+    animation-delay: 2s;
+}
+
+#page-more .volunteering .decorative:nth-child(2) {
+    bottom: -6rem;
+    right: -8rem;
+    width: 36rem;
+    height: 36rem;
+    animation-delay: 1s;
+}
+
+#page-more .awards .decorative:nth-child(1) {
+    top: -4rem;
+    left: 2rem;
+    width: 42rem;
+    height: 42rem;
+    animation-delay: 3s;
+}
+
+@media screen and (max-width: 1100px) {
+    #page-more :is(.projects, .awards-list) {
+        flex-direction: column;
+        padding: 0 4rem;
+    }
+
+    #page-more :is(.project, .award) img {
+        aspect-ratio: 2.75 / 1;
+    }
+
+    #page-more .point {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    #page-more .volunteering .point:nth-child(4) {
+        flex-direction: column-reverse;
+    }
+
+    #page-more .point .point-img {
+        margin: 0 4rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #page-more :is(.projects, .awards-list) {
+        padding: 0;
+    }
+
+    #page-more .point .point-img {
+        margin: 0;
+    }
+}
