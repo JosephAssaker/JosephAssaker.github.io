@@ -2,18 +2,253 @@
 
 #page-imgtostory .container {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 90%;
+    margin: 0 auto;
+    padding: 1.5rem 0;
+    overflow-y: clip;
 }
 
-#page-imgtostory img {
-    max-width: 25%;
+#page-imgtostory .header {
+    position: relative;
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+#page-imgtostory .header img {
+    width: 8rem;
     height: auto;
 }
 
-@media screen and (max-width: 1000px) {
-    #page-imgtostory img {
-        max-width: 35%;
+#page-imgtostory .header .title {
+    font-size: 3rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
+#page-imgtostory .header .title svg {
+    width: 2rem;
+    height: 2rem;
+}
+
+#page-imgtostory .tags {
+    margin-top: 0.1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#page-imgtostory .tags .tag {
+    font-size: 1rem;
+    padding: 0.25rem 0.75rem 0.375rem 0.75rem;
+    border-radius: 0.5rem;
+    background-color: rgba(24, 88, 131, 0.603);
+    color: white;
+}
+
+#page-imgtostory .description {
+    margin: 1.5rem;
+    margin-top: 0.5rem;
+    font-size: 1.5rem;
+    text-align: center;
+    font-style: italic;
+}
+
+#page-imgtostory .overview {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+}
+
+#page-imgtostory .overview .overview-description {
+    flex: 1;
+    font-size: 1.25rem;
+}
+
+#page-imgtostory .overview .overview-description ul {
+    list-style-type: circle;
+    margin: 1rem 0 0 2rem;
+    padding: 0;
+}
+
+#page-imgtostory .overview .overview-description ul li {
+    margin: 0.5rem 0;
+    font-weight: bold;
+}
+
+#page-imgtostory .overview .overview-video {
+    flex: 1;
+    background-color: white;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.125);
+}
+
+#page-imgtostory .overview .overview-video video {
+    max-width: 100%;
+    height: auto;
+}
+
+#page-imgtostory .technical {
+    position: relative;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+}
+
+#page-imgtostory .technical .technical-description {
+    flex: 1;
+    font-size: 1.25rem;
+}
+
+#page-imgtostory .technical .technical-description ul {
+    list-style-type: circle;
+    margin: 1rem 0 0 2rem;
+    padding: 0;
+}
+
+#page-imgtostory .technical .technical-description ul li {
+    margin: 0.5rem 0;
+}
+
+#page-imgtostory .technical .technical-image {
+    flex: 1;
+    background-color: white;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.125);
+}
+
+#page-imgtostory .technical .technical-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+#page-imgtostory .footer {
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#page-imgtostory .footer p {
+    font-size: 1.25rem;
+}
+
+#page-imgtostory .footer a {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    color: black;
+    text-decoration: none;
+    padding-left: 0.2rem;
+    padding-right: 0.3rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+#page-imgtostory .footer a:hover {
+    box-shadow: 0 0 0.55rem rgba(0, 0, 0, 0.4);
+    scale: 1.02;
+}
+
+#page-imgtostory .footer a svg {
+    width: 3rem;
+    height: 3rem;
+}
+
+#page-imgtostory .footer a span {
+    font-size: 1.25rem;
+    padding: 0.3rem;
+    padding-left: 0.4rem;
+    border-left: rgb(59, 59, 59) 0.1rem solid;
+}
+
+/* Background Blobs */
+
+#page-imgtostory .header .decorative:nth-child(1) {
+    top: -4rem;
+    right: -26rem;
+    width: 20rem;
+    height: 20rem;
+}
+
+#page-imgtostory .overview .decorative:nth-child(1) {
+    top: -12rem;
+    left: -14rem;
+    width: 36rem;
+    height: 36rem;
+    animation-delay: 1s;
+}
+
+#page-imgtostory .overview .decorative:nth-child(2) {
+    top: 4rem;
+    right: -6rem;
+    width: 36rem;
+    height: 36rem;
+    animation-delay: 3s;
+}
+
+#page-imgtostory .technical .decorative:nth-child(1) {
+    bottom: -18rem;
+    left: -16rem;
+    width: 36rem;
+    height: 36rem;
+    animation-delay: 2s;
+}
+
+@media screen and (max-width: 1100px) {
+    #page-imgtostory .overview {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    #page-imgtostory .technical {
+        flex-direction: column-reverse;
+        margin-top: 1.5rem;
+    }
+
+    #page-imgtostory :is(.overview, .technical) :is(.overview-description, .technical-description) {
+        text-align: center;
+    }
+
+    #page-imgtostory :is(.overview, .technical) :is(.overview-description, .technical-description) ul {
+        text-align: center;
+        list-style-position: inside;
+        width: fit-content;
+        margin: auto;
+        margin-top: 1rem;
+    }
+
+    #page-imgtostory .footer {
+        text-align: center;
+        align-items: center;
+        margin-bottom: 2rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #page-imgtostory .header img {
+        width: 5rem;
+        height: auto;
     }
 }
